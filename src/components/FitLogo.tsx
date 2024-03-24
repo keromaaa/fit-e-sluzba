@@ -12,7 +12,7 @@ const FitLogo: React.FC<FitLogoProps> = ({ small, className }) => {
         className='aspect-[1079/567] h-full bg-center bg-cover'
         style={{ backgroundImage: 'url(./fit-logo.jpg)' }}
       />
-      <h1 className={`font-medium ${small ? 'mt-3 text-xl' : 'mt-4 text-4xl'}`}>e-služba</h1>
+      <h1 className={`font-medium ${small ? 'mt-2 text-xl' : 'mt-4 text-4xl'}`}>e-služba</h1>
     </div>
   )
 }
