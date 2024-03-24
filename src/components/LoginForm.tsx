@@ -1,6 +1,7 @@
 import React from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
-import Input from './Input'
+import Input from './ui/Input'
+import Button from './ui/Button'
 
 interface FormInput {
   brojIndeksa: string
@@ -35,7 +36,7 @@ const LoginForm = () => {
       {(errors.brojIndeksa || errors.lozinka) && (
         <label className='text-red-400 -my-4'>Netačan broj indeksa i/ili lozinka.</label>
       )}
-      <Input type='submit' value='Prijavi se' />
+      <Button type='submit' text='Prijavi se' />
     </form>
   )
 }

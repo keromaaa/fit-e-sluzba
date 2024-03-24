@@ -10,15 +10,7 @@ interface InputProps extends HTMLProps<HTMLInputElement> {
 
 const Input: React.FC<InputProps> = React.forwardRef(
   ({ register, type, placeholder, className, ...props }, ref) => {
-    return type === 'submit' ? (
-      <input
-        ref={ref}
-        {...props}
-        className={`px-2 py-1 w-full font-medium rounded-md bg-primary text-white cursor-pointer hover:opacity-80 transition-opacity ${className}`}
-        type={type}
-        placeholder={placeholder}
-      />
-    ) : (
+    return (
       <input
         ref={ref}
         {...props}
