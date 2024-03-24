@@ -1,15 +1,18 @@
 import React from 'react'
 
-const FitLogo = () => {
-  const logoUrl = './fit-logo.jpg'
+interface FitLogoProps {
+  className?: string
+  small?: boolean
+}
 
+const FitLogo: React.FC<FitLogoProps> = ({ small, className }) => {
   return (
-    <div className='flex gap-2 items-center'>
+    <div className={`flex gap-2 items-center ${className} ${small ? 'h-10' : 'h-16'}`}>
       <div
-        className='aspect-[1079/567] h-16 bg-center bg-cover'
-        style={{ backgroundImage: `url(${logoUrl})` }}
+        className='aspect-[1079/567] h-full bg-center bg-cover'
+        style={{ backgroundImage: 'url(./fit-logo.jpg)' }}
       />
-      <h1 className='text-4xl font-medium mt-4'>e-služba</h1>
+      <h1 className={`font-medium ${small ? 'mt-3 text-xl' : 'mt-4 text-4xl'}`}>e-služba</h1>
     </div>
   )
 }
