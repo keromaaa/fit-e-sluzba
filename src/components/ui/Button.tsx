@@ -31,6 +31,15 @@ const Button: React.FC<ButtonProps> = React.forwardRef(
             {text}
           </button>
         )
+      case 'text':
+        return (
+          <button
+            {...props}
+            className={`font-semibold text-primary hover:opacity-80 transition-opacity cursor-pointer ${className}`}
+          >
+            {text}
+          </button>
+        )
       default:
         return (
           <button

@@ -1,4 +1,3 @@
-import React from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import Input from './ui/Input'
 import Button from './ui/Button'

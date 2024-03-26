@@ -1,4 +1,3 @@
-import React from 'react'
 import FitLogo from '../FitLogo'
 import Button from './Button'
 
