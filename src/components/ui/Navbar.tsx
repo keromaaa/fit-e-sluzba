@@ -1,4 +1,5 @@
 import FitLogo from '../FitLogo'
+import ProfilePicture from '../ProfilePicture'
 import Button from './Button'
 
 const Navbar = () => {
@@ -11,10 +12,7 @@ const Navbar = () => {
         <Button type='nav' text='Ispiti' className='w-fit' />
         <Button type='nav' text='Moji podaci' className='w-fit' />
       </div>
-      <div
-        className='aspect-square h-10 rounded-full place-self-end bg-center bg-cover'
-        style={{ backgroundImage: 'url(./no-pfp.png)' }}
-      ></div>
+      <ProfilePicture className='place-self-end' />
     </nav>
   )
 }
