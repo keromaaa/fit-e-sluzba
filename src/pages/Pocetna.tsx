@@ -13,6 +13,14 @@ const Pocetna = () => {
       <NotificationCard />
       <NotificationCard />
       <NotificationCard />
+<<<<<<< HEAD
+=======
+      <NotificationCard />
+      <NotificationCard />
+      <NotificationCard />
+      <NotificationCard />
+      <NotificationCard />
+>>>>>>> 549049ed5f87ac2d064c620be99ae8d41620f5fb
     </DefaultLayout>
   )
 }
