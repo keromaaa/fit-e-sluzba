@@ -5,7 +5,7 @@ import NotificationCard from '../components/NotificationCard'
 
 const Pocetna = () => {
   return (
-    <DefaultLayout>
+    <DefaultLayout pageTitle='Početna'>
       <div className='flex gap-4'>
         <Input type='text' placeholder='Pretraži obavijesti' />
         <Button text='Pretraži' className='flex-1 px-4' />

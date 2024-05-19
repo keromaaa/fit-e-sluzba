@@ -6,7 +6,7 @@ import ProfileInfo from '../components/ProfileInfo'
 
 const MojiPodaci = () => {
   return (
-    <ProfileLayout className=''>
+    <ProfileLayout>
       <aside className='flex flex-col items-center gap-4 w-1/4 border-2 rounded-md border-neutral-300 bg-neutral-100 p-4'>
         <ProfilePicture className='w-full h-auto' />
         <Button type='text' text='Uredi profil' />
