@@ -1,4 +1,3 @@
-import React from 'react'
 import LoginRegisterLayout from '../layouts/LoginRegisterLayout'
 import FitLogo from '../components/FitLogo'
 import LoginForm from '../components/LoginForm'

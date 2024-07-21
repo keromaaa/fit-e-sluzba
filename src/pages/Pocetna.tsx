@@ -1,7 +1,7 @@
 import DefaultLayout from '../layouts/DefaultLayout'
-import Input from '../components/ui/Input'
-import Button from '../components/ui/Button'
 import NotificationCard from '../components/NotificationCard'
+import Button from '../components/ui/components/Button'
+import Input from '../components/ui/components/Input'
 
 const Pocetna = () => {
   return (
@@ -13,14 +13,11 @@ const Pocetna = () => {
       <NotificationCard />
       <NotificationCard />
       <NotificationCard />
-<<<<<<< HEAD
-=======
       <NotificationCard />
       <NotificationCard />
       <NotificationCard />
       <NotificationCard />
       <NotificationCard />
->>>>>>> 549049ed5f87ac2d064c620be99ae8d41620f5fb
     </DefaultLayout>
   )
 }

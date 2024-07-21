@@ -1,12 +1,5 @@
-import React, { HTMLProps } from 'react'
-import { UseFormRegisterReturn } from 'react-hook-form'
-
-interface InputProps extends HTMLProps<HTMLInputElement> {
-  type: string
-  register?: UseFormRegisterReturn
-  placeholder?: string
-  className?: string
-}
+import React from 'react'
+import { InputProps } from '../UiModels'
 
 const Input: React.FC<InputProps> = React.forwardRef(
   ({ register, type, placeholder, className, ...props }, ref) => {

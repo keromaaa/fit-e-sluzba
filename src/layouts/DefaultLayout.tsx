@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from '../components/ui/Navbar'
 import PageTitle from '../components/PageTitle'
+import Navbar from '../components/ui/components/Navbar'
 
 interface DefaultLayoutProps {
   children: React.ReactNode

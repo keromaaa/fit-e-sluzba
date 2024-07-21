@@ -1,12 +1,5 @@
-import React, { HTMLProps } from 'react'
-import { UseFormRegisterReturn } from 'react-hook-form'
-
-interface ButtonProps extends HTMLProps<HTMLButtonElement> {
-  text: string
-  type?: string
-  className?: string
-  register?: UseFormRegisterReturn
-}
+import React from 'react'
+import { ButtonProps } from '../UiModels'
 
 const Button: React.FC<ButtonProps> = React.forwardRef(
   ({ text, type, className, register, ...props }, ref) => {

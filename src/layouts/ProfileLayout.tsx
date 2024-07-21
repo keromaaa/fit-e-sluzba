@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../components/ui/Navbar'
+import Navbar from '../components/ui/components/Navbar'
 
 interface ProfileLayoutProps {
   children: React.ReactNode

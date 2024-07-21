@@ -1,6 +1,6 @@
 import { SubmitHandler, useForm } from 'react-hook-form'
-import Input from './ui/Input'
-import Button from './ui/Button'
+import Input from './ui/components/Input'
+import Button from './ui/components/Button'
 
 interface FormInput {
   brojIndeksa: string
