@@ -86,7 +86,7 @@ const Ispiti = () => {
       {prijavljeniIspitiTblConfig.tableData.length ? (
         <Table config={prijavljeniIspitiTblConfig} />
       ) : (
-        <p>Trenutno nemate nijedan priavljen ispit...</p>
+        <p>Trenutno nemate nijedan prijavljen ispit...</p>
       )}
     </DefaultLayout>
   );

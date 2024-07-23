@@ -1,5 +1,5 @@
-import React from 'react'
-import { InputProps } from '../UiModels'
+import React from "react";
+import { InputProps } from "../Models";
 
 const Input: React.FC<InputProps> = React.forwardRef(
   ({ register, type, placeholder, className, ...props }, ref) => {
@@ -12,8 +12,8 @@ const Input: React.FC<InputProps> = React.forwardRef(
         type={type}
         placeholder={placeholder}
       />
-    )
+    );
   }
-)
+);
 
-export default Input
+export default Input;

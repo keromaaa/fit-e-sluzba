@@ -1,23 +1,23 @@
-import { ButtonProps } from '../ui/UiModels'
+import { ButtonProps } from '../ui/Models';
 
 export interface TableProps {
-  config: TableConfig
+  config: TableConfig;
 }
 
 export interface TableConfig {
-  name: string
-  tableHeaders: TableHeader[]
-  tableData: any[]
-  tableButtons: ButtonProps[]
+  name: string;
+  tableHeaders: TableHeader[];
+  tableData: any[];
+  tableButtons: ButtonProps[];
 }
 
 export interface TableHeader {
-  key: string
-  displayName: string
+  key: string;
+  displayName: string;
 }
 
 export interface TableDataProps {
-  data?: any
-  buttons?: ButtonProps[]
-  keys?: string[]
+  data?: any;
+  buttons?: ButtonProps[];
+  keys?: string[];
 }
