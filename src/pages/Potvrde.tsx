@@ -1,4 +1,3 @@
-import React from "react";
 import DefaultLayout from "../layouts/DefaultLayout";
 import DropdownList from "../components/ui/components/DropdownList";
 import { DropdownListModel } from "../components/ui/Models";
@@ -57,7 +56,6 @@ const Potvrde = () => {
 
   const {
     register,
-    setError,
     formState: { errors },
     handleSubmit,
   } = useForm<FormInput>();
