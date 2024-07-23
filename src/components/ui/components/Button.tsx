@@ -28,7 +28,7 @@ const Button: React.FC<ButtonProps> = React.forwardRef(
         return (
           <button
             {...props}
-            className={`font-semibold text-nowrap hover:text-primary transition-colors cursor-pointer ${className}`}
+            className={`font-medium text-nowrap hover:text-primary transition-colors cursor-pointer ${className}`}
           >
             {text}
           </button>

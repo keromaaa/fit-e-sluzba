@@ -8,7 +8,7 @@ const Input: React.FC<InputProps> = React.forwardRef(
         ref={ref}
         {...props}
         {...register}
-        className={`px-2 py-1 w-full rounded-md border-2 border-neutral-300 outline-none focus:border-primary transition-colors ${className}`}
+        className={`px-2 py-1 w-full rounded-md border-2 border--300 outline-none focus:border-primary transition-colors ${className}`}
         type={type}
         placeholder={placeholder}
       />
