@@ -38,7 +38,7 @@ const Potvrde = () => {
         displayName: "Status zahtjeva",
       },
     ],
-    tableButtons: [
+    dataButtons: [
       {
         type: "text",
         text: "Otkaži zahtjev",

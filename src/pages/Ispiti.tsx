@@ -8,19 +8,22 @@ const Ispiti = () => {
     name: "tblPolozeni",
     tableHeaders: [
       {
+        type: "text",
         key: "nazivPredmeta",
         displayName: "Naziv predmeta",
       },
       {
+        type: "date",
         key: "vrijemeIspita",
         displayName: "Vrijeme obavljanja ispita",
       },
       {
+        type: "text",
         key: "mjestoIspita",
         displayName: "Mjesto obavljanja ispita",
       },
     ],
-    tableButtons: [
+    dataButtons: [
       {
         text: "Prijavi ispit",
       },
@@ -43,19 +46,22 @@ const Ispiti = () => {
     name: "tblPolozeni",
     tableHeaders: [
       {
+        type: "text",
         key: "nazivPredmeta",
         displayName: "Naziv predmeta",
       },
       {
+        type: "date",
         key: "vrijemeIspita",
         displayName: "Vrijeme obavljanja ispita",
       },
       {
+        type: "text",
         key: "mjestoIspita",
         displayName: "Mjesto obavljanja ispita",
       },
     ],
-    tableButtons: [
+    dataButtons: [
       {
         text: "Odjavi ispit",
       },

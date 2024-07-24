@@ -37,7 +37,7 @@ const Button: React.FC<ButtonProps> = React.forwardRef(
         return (
           <button
             {...props}
-            className={`font-semibold text-nowrap hover:opacity-80 bg-primary transition-opacity cursor-pointer ${className}`}
+            className={`font-semibold text-nowrap hover:opacity-80 text-primary transition-opacity cursor-pointer ${className}`}
           >
             {text}
           </button>

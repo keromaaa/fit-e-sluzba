@@ -5,6 +5,7 @@ import Pocetna from "./pages/Pocetna";
 import MojiPodaci from "./pages/MojiPodaci";
 import Ispiti from "./pages/Ispiti";
 import Potvrde from "./pages/Potvrde";
+import OvjeraSemestra from "./pages/OvjeraSemestra";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/pocetna" element={<Pocetna />}></Route>
         <Route path="/potvrde" element={<Potvrde />}></Route>
+        <Route path="/ovjera-semestra" element={<OvjeraSemestra />}></Route>
         <Route path="/ispiti" element={<Ispiti />}></Route>
         <Route path="/moji-podaci" element={<MojiPodaci />}></Route>
       </Routes>

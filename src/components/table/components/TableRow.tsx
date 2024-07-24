@@ -1,16 +1,10 @@
 import React from "react";
-import TableData from "./TableData";
+import { TableRowProps } from "../TableModels";
 
-interface TableRowProps {
-  data: string[];
-}
-
-const TableRow: React.FC<TableRowProps> = ({ data }) => {
+const TableRow: React.FC<TableRowProps> = ({ children }) => {
   return (
     <tr className="even:bg-gray-200 odd:bg-gray-100 border-2 border-white">
-      {data.map((data, index) => (
-        <TableData key={index} value={data} />
-      ))}
+      {children}
     </tr>
   );
 };

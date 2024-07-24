@@ -1,11 +1,15 @@
-import React from 'react'
+import React from "react";
+import { TableHeaderProps } from "../TableModels";
 
-interface TableHeaderProps {
-  displayName?: string
-}
+const TableHeader: React.FC<TableHeaderProps> = ({
+  displayName,
+  className,
+}) => {
+  return (
+    <th className={`p-2 border-2 border-white text-nowrap ${className}`}>
+      {displayName}
+    </th>
+  );
+};
 
-const TableHeader: React.FC<TableHeaderProps> = ({ displayName }) => {
-  return <th className='p-2 border-2 border-white'>{displayName}</th>
-}
-
-export default TableHeader
+export default TableHeader;
