@@ -26,14 +26,17 @@ const Potvrde = () => {
     name: "potvrdeTable",
     tableHeaders: [
       {
+        type: "text",
         key: "vrsta",
         displayName: "Vrsta potvrde",
       },
       {
+        type: "date",
         key: "datum",
         displayName: "Datum slanja zahtjeva",
       },
       {
+        type: "text",
         key: "status",
         displayName: "Status zahtjeva",
       },

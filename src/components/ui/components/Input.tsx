@@ -2,7 +2,7 @@ import React from "react";
 import { InputProps } from "../Models";
 
 const Input: React.FC<InputProps> = React.forwardRef(
-  ({ register, type, placeholder, className, ...props }, ref) => {
+  ({ register, type, placeholder, className, labelText, ...props }, ref) => {
     switch (type) {
       case "table-text":
         return (
@@ -58,14 +58,17 @@ const Input: React.FC<InputProps> = React.forwardRef(
         );
       default:
         return (
-          <input
-            ref={ref}
-            {...props}
-            {...register}
-            className={`px-2 py-1 w-full rounded-md border-2 border-gray-300 outline-none focus:border-primary transition-colors ${className}`}
-            type={type}
-            placeholder={placeholder}
-          />
+          <div className="flex flex-col gap-2 w-full">
+            {labelText && <label className="font-medium">{labelText}</label>}
+            <input
+              ref={ref}
+              {...props}
+              {...register}
+              className={`px-2 py-1 w-full rounded-md border-2 border-gray-300 outline-none focus:border-primary transition-colors ${className}`}
+              type={type}
+              placeholder={placeholder}
+            />
+          </div>
         );
     }
   }
