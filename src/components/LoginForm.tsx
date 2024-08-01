@@ -1,6 +1,7 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import Input from "./ui/components/Input";
 import Button from "./ui/components/Button";
+import { useNavigate } from "react-router-dom";
 
 interface FormInput {
   brojIndeksa: string;
@@ -8,12 +9,17 @@ interface FormInput {
 }
 
 const LoginForm = () => {
+  const navigate = useNavigate();
+
   const {
     register,
     formState: { errors },
     handleSubmit,
   } = useForm<FormInput>();
-  const onSubmit: SubmitHandler<FormInput> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<FormInput> = (data) => {
+    console.log(data);
+    navigate("/pocetna");
+  };
 
   return (
     <form

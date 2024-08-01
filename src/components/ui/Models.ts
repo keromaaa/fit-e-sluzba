@@ -3,7 +3,7 @@ import { UseFormRegisterReturn } from 'react-hook-form';
 import { UserConfigFnPromise } from 'vite';
 
 export interface ButtonProps extends HTMLProps<HTMLButtonElement> {
-  text: string;
+  text?: string;
   type?: string;
   className?: string;
   register?: UseFormRegisterReturn;

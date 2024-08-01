@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { useDetectClickOutside } from "react-detect-click-outside";
 import { HoverMenuGroupProps } from "../Models";
+import { useDetectClickOutside } from "react-detect-click-outside";
 
 const HoverMenuGroup: React.FC<HoverMenuGroupProps> = ({
   className,

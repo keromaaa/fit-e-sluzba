@@ -1,5 +1,6 @@
 import React from "react";
 import { ButtonProps } from "../Models";
+import IconClose from "../../icons/IconClose";
 
 const Button: React.FC<ButtonProps> = React.forwardRef(
   ({ text, type, className, register, ...props }, ref) => {
@@ -40,6 +41,15 @@ const Button: React.FC<ButtonProps> = React.forwardRef(
             className={`font-semibold text-nowrap hover:opacity-80 text-primary transition-opacity cursor-pointer ${className}`}
           >
             {text}
+          </button>
+        );
+      case "modal-close":
+        return (
+          <button
+            {...props}
+            className={`group absolute top-4 right-4 bg-white p-1 rounded-sm hover:bg-black hover:bg-opacity-5 transition-all cursor-pointer ${className}`}
+          >
+            <IconClose />
           </button>
         );
       default:

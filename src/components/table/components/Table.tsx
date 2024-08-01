@@ -12,9 +12,9 @@ const Table: React.FC<TableProps> = ({ config }) => {
   const keys: string[] = config.tableHeaders.map((header) => header.key);
 
   const buttonHeaders =
-    config.dataButtons?.length! > config.inputButtons?.length!
-      ? config.dataButtons
-      : config.inputButtons;
+    config.dataButtons?.length! < config.inputButtons?.length!
+      ? config.inputButtons
+      : config.dataButtons;
 
   return (
     <table className="border border-hidden overflow-hidden border-primary rounded-md table">
