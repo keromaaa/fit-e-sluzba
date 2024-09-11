@@ -3,14 +3,21 @@ import ProfileLayout from "../layouts/ProfileLayout";
 import ProfileInfo from "../components/ProfileInfo";
 import Button from "../components/ui/components/Button";
 import Modal from "../components/modal/Modal";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import EditProfilePopup from "../components/popups/EditProfilePopup";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 
 const MojiPodaci = () => {
   const navigate = useNavigate();
+  const auth = useContext(AuthContext);
 
   const [editProfileOpen, setEditProfileOpen] = useState(false);
+
+  const handleLogout = () => {
+    auth?.logout();
+    navigate("/login");
+  };
 
   return (
     <ProfileLayout>
@@ -26,24 +33,33 @@ const MojiPodaci = () => {
           type="text"
           text="Odjavi se"
           className="text-red-400 hover:text-red-300"
-          onClick={() => navigate("/login")}
+          onClick={() => handleLogout()}
         />
       </aside>
       <section className="flex-1 grid grid-cols-2">
-        <ProfileInfo label="Ime" value="Ime" />
-        <ProfileInfo label="JMBG" value="1234567890123456" />
-        <ProfileInfo label="Prezime" value="Prezime" />
-        <ProfileInfo label="Kanton/regija" value="HNK" />
-        <ProfileInfo label="Datum rođenja" value="1.1.2000." />
-        <ProfileInfo label="Mjesto" value="Mostar" />
-        <ProfileInfo label="Broj indeksa" value="IB210000" />
-        <ProfileInfo label="Općina/grad" value="Mostar" />
-        <ProfileInfo label="Adresa stanovanja" value="Sjeverni logor bb" />
-        <ProfileInfo label="Država" value="Bosna i Hercegovina" />
-        <ProfileInfo label="Adresa prebivanja" value="Sjeverni logor bb" />
-        <ProfileInfo label="Nacionalnost" value="Bošnjak" />
-        <ProfileInfo label="Godina studija" value="3" />
-        <ProfileInfo label="Broj telefona" value="+387612345678" />
+        <ProfileInfo label="Ime" value={auth?.user?.ime!} />
+        <ProfileInfo label="JMBG" value={auth?.user?.jmbg.toString()!} />
+        <ProfileInfo label="Prezime" value={auth?.user?.prezime!} />
+        <ProfileInfo label="Kanton/regija" value={auth?.user?.kantonRegija!} />
+        <ProfileInfo label="Datum rođenja" value={auth?.user?.datumRodjenja!} />
+        <ProfileInfo label="Mjesto" value={auth?.user?.mjesto!} />
+        <ProfileInfo label="Broj indeksa" value={auth?.user?.brojIndeksa!} />
+        <ProfileInfo label="Općina/grad" value={auth?.user?.opcinaGrad!} />
+        <ProfileInfo
+          label="Adresa stanovanja"
+          value={auth?.user?.adresaStanovanja!}
+        />
+        <ProfileInfo label="Država" value={auth?.user?.drzava!} />
+        <ProfileInfo
+          label="Adresa prebivanja"
+          value={auth?.user?.adresaPrebivanja!}
+        />
+        <ProfileInfo label="Nacionalnost" value={auth?.user?.nacionalnost!} />
+        <ProfileInfo
+          label="Godina studija"
+          value={auth?.user?.godinaStudija.toString()!}
+        />
+        <ProfileInfo label="Broj telefona" value={auth?.user?.brojTelefona!} />
       </section>
       <Modal isOpen={editProfileOpen} onClose={() => setEditProfileOpen(false)}>
         <EditProfilePopup onClose={() => setEditProfileOpen(false)} />

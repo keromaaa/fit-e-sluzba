@@ -63,6 +63,7 @@ const Table: React.FC<TableProps> = ({ config }) => {
                     <Button
                       type="accent"
                       text={button.text}
+                      onClick={() => button.onClick}
                       className="mx-auto block"
                     />
                   </td>

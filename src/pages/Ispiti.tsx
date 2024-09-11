@@ -1,9 +1,18 @@
+import { useContext, useEffect } from "react";
 import PageTitle from "../components/PageTitle";
 import Table from "../components/table/components/Table";
 import { TableConfig } from "../components/table/TableModels";
 import DefaultLayout from "../layouts/DefaultLayout";
+import SluzbaProvider, { SluzbaContext } from "../context/SluzbaContext";
 
 const Ispiti = () => {
+  const sluzba = useContext(SluzbaContext);
+
+  useEffect(() => {
+    console.log(sluzba?.neprijavljeniIspiti);
+    console.log(sluzba?.prijavljeniIspiti);
+  }, [sluzba]);
+
   const neprijavljeniIspitiTblConfig: TableConfig = {
     name: "tblPolozeni",
     tableHeaders: [
@@ -26,20 +35,10 @@ const Ispiti = () => {
     dataButtons: [
       {
         text: "Prijavi ispit",
+        onClick: () => console.log("event"),
       },
     ],
-    tableData: [
-      {
-        nazivPredmeta: "Razvoj softvera II",
-        vrijemeIspita: "Srijeda, 4. septembar 2024.",
-        mjestoIspita: "AKS",
-      },
-      {
-        nazivPredmeta: "Računarske mreže",
-        vrijemeIspita: "Subota, 7. septembar 2024.",
-        mjestoIspita: "AMF 2",
-      },
-    ],
+    tableData: sluzba?.neprijavljeniIspiti ?? [],
   };
 
   const prijavljeniIspitiTblConfig: TableConfig = {
@@ -66,18 +65,7 @@ const Ispiti = () => {
         text: "Odjavi ispit",
       },
     ],
-    tableData: [
-      // {
-      //   nazivPredmeta: "Razvoj softvera II",
-      //   vrijemeIspita: "Srijeda, 4. septembar 2024.",
-      //   mjestoIspita: "AKS",
-      // },
-      // {
-      //   nazivPredmeta: "Računarske mreže",
-      //   vrijemeIspita: "Subota, 7. septembar 2024.",
-      //   mjestoIspita: "AMF 2",
-      // },
-    ],
+    tableData: sluzba?.prijavljeniIspiti ?? [],
   };
 
   return (

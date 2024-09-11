@@ -1,6 +1,34 @@
 [
   {
     "brojIndeksa": "IB210193",
-    "ime": "Kerim"
+    "ime": "Kerim",
+    "prezime": "Brkić",
+    "datumRodjenja": "03.12.2002.",
+    "adresaStanovanja": "Sjeverni logor bb",
+    "adresaPrebivanja": "Sjeverni logor bb",
+    "godinaStudija": 3,
+    "jmbg": 12345678901223456,
+    "kantonRegija": "HNK",
+    "mjesto": "Mostar",
+    "opcinaGrad": "Mostar",
+    "drzava": "Bosna i Hercegovina",
+    "nacionalnost": "Bošnjak",
+    "brojTelefona": "+38761234567"
+  },
+  {
+    "brojIndeksa": "IB200251",
+    "ime": "Tarik",
+    "prezime": "Hrustanović",
+    "datumRodjenja": "11.4.2002.",
+    "adresaStanovanja": "Sjeverni logor bb",
+    "adresaPrebivanja": "Sjeverni logor bb",
+    "godinaStudija": 3,
+    "jmbg": 12345678901223456,
+    "kantonRegija": "HNK",
+    "mjesto": "Mostar",
+    "opcinaGrad": "Mostar",
+    "drzava": "Bosna i Hercegovina",
+    "nacionalnost": "Bošnjak",
+    "brojTelefona": "+38761234567"
   }
 ]

@@ -13,11 +13,16 @@ export interface User {
   drzava: string;
   nacionalnost: string;
   brojTelefona: string;
-  password: string;
-  slika: File;
 }
 
-export interface LoginRequest {
-  brojIndeksa: string;
-  password: string;
+export interface UserEditRequest {
+  ime: string;
+  prezime: string;
+  adresaPrebivanja: string;
+  kantonRegija: string;
+  mjesto: string;
+  opcinaGrad: string;
+  drzava: string;
+  nacionalnost: string;
+  brojTelefona: string;
 }

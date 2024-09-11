@@ -1,37 +1,25 @@
 import { useForm } from "react-hook-form";
 import Input from "../ui/components/Input";
 import Button from "../ui/components/Button";
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
+import { UserEditRequest } from "../../models/Auth";
 
 interface EditProfilePopupProps {
   onClose: () => void;
 }
 
-interface FormValues {
-  ime: string;
-  prezime: string;
-  datumRodjenja: string;
-  brojIndeksa: string;
-  adresaStanovanja: string;
-  adresaPrebivanja: string;
-  godinaStudija: number;
-  jmbg: number;
-  kantonRegija: string;
-  mjesto: string;
-  opcinaGrad: string;
-  drzava: string;
-  nacionalnost: string;
-  brojTelefona: string;
-}
-
 const EditProfilePopup: React.FC<EditProfilePopupProps> = ({ onClose }) => {
+  const auth = useContext(AuthContext);
+
   const {
     register,
     formState: { errors },
     handleSubmit,
-  } = useForm<FormValues>();
+  } = useForm<UserEditRequest>();
 
-  const onSubmit = (data: FormValues) => {
-    console.log(data);
+  const onSubmit = (data: UserEditRequest) => {
+    auth?.editUser(data);
     onClose();
   };
 
@@ -45,63 +33,63 @@ const EditProfilePopup: React.FC<EditProfilePopupProps> = ({ onClose }) => {
         {...register("ime", { required: true })}
         type="text"
         labelText="Ime:"
-        defaultValue="Ime"
+        defaultValue={auth?.user?.ime}
         className={errors.ime ? "border-red-400" : ""}
       />
       <Input
         {...register("prezime", { required: true })}
         type="text"
         labelText="Prezime:"
-        defaultValue="Prezime"
+        defaultValue={auth?.user?.prezime}
         className={errors.prezime ? "border-red-400" : ""}
       />
       <Input
         {...register("adresaPrebivanja", { required: true })}
         type="text"
         labelText="Adresa prebivanja:"
-        defaultValue="Sjeverni logor BB"
+        defaultValue={auth?.user?.adresaPrebivanja}
         className={errors.adresaPrebivanja ? "border-red-400" : ""}
       />
       <Input
         {...register("kantonRegija", { required: true })}
         type="text"
         labelText="Kanton/regija:"
-        defaultValue="HNK"
+        defaultValue={auth?.user?.kantonRegija}
         className={errors.kantonRegija ? "border-red-400" : ""}
       />
       <Input
         {...register("mjesto", { required: true })}
         type="text"
         labelText="Mjesto:"
-        defaultValue="Mostar"
+        defaultValue={auth?.user?.mjesto}
         className={errors.mjesto ? "border-red-400" : ""}
       />
       <Input
         {...register("opcinaGrad", { required: true })}
         type="text"
         labelText="Općina/grad:"
-        defaultValue="Mostar"
+        defaultValue={auth?.user?.opcinaGrad}
         className={errors.opcinaGrad ? "border-red-400" : ""}
       />
       <Input
         {...register("drzava", { required: true })}
         type="text"
         labelText="Država:"
-        defaultValue="Bosna i Hercegovina"
+        defaultValue={auth?.user?.drzava}
         className={errors.drzava ? "border-red-400" : ""}
       />
       <Input
         {...register("nacionalnost", { required: true })}
         type="text"
         labelText="Nacionalnost:"
-        defaultValue="Bošnjak"
+        defaultValue={auth?.user?.nacionalnost}
         className={errors.nacionalnost ? "border-red-400" : ""}
       />
       <Input
         {...register("brojTelefona", { required: true })}
         type="text"
         labelText="Broj telefona:"
-        defaultValue="+387612345678"
+        defaultValue={auth?.user?.brojTelefona}
         className={errors.brojTelefona ? "border-red-400" : ""}
       />
       {errors.root && (

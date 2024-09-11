@@ -1,7 +1,7 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { InputProps } from "../Models";
 
-const Input: React.FC<InputProps> = React.forwardRef(
+const Input: React.FC<InputProps> = forwardRef(
   ({ register, type, placeholder, className, labelText, ...props }, ref) => {
     switch (type) {
       case "table-text":

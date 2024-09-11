@@ -1,8 +1,8 @@
 import React from "react";
-import { NotificationModel } from "../NotificationCard";
+import { Notification } from "../../models/Notification";
 
 interface NotificationPopupProps {
-  notification: NotificationModel;
+  notification: Notification;
 }
 
 const NotificationPopup: React.FC<NotificationPopupProps> = ({
@@ -11,14 +11,14 @@ const NotificationPopup: React.FC<NotificationPopupProps> = ({
   return (
     <div className="w-[600px] flex flex-col gap-4">
       <h2 className="text-xl max-w-[480px] font-semibold">
-        {notification.title}
+        {notification.naslov}
       </h2>
       <div className="-mt-4 flex gap-2 text-sm *:text-gray-400">
         <span>{notification.createdBy}</span>
         <span>•</span>
-        <span>{notification.createdDate}</span>
+        <span>{notification.createdAt}</span>
       </div>
-      <p>{notification.content}</p>
+      <p className="whitespace-pre-line">{notification.sadrzaj}</p>
     </div>
   );
 };

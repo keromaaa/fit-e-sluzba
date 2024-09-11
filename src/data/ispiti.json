@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "nazivPredmeta": "Interakcija čovjek-računar",
+    "vrijemeIspita": "Ponedjeljak, 26. august 2024.",
+    "mjestoIspita": "Online"
+  },
+  {
+    "id": 2,
+    "nazivPredmeta": "Razvoj softvera II",
+    "vrijemeIspita": "Srijeda, 4. septembar 2024.",
+    "mjestoIspita": "AKS"
+  },
+  {
+    "id": 3,
+    "nazivPredmeta": "Računarske mreže",
+    "vrijemeIspita": "Subota, 7. septembar 2024.",
+    "mjestoIspita": "AMF 2"
+  }
+]
