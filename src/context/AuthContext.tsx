@@ -5,7 +5,7 @@ import { User, UserEditRequest } from "../models/Auth";
 type AuthContextType = {
   user: User | null;
   login: (brojIndeksa: string) => void;
-  testing2?: boolean;
+  testing1?: boolean;
   logout: () => void;
   editUser: (request: UserEditRequest) => void;
 };
